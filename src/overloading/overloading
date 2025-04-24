@@ -1,0 +1,18 @@
+Method Overloading
+------------------
+
+- Allows different methods to have the same name but different with different signatures.
+- Signature can differ by the number of input parameters or type of input parameters, or a mixture of both.
+- It's not possible to overload method by changing only the return type.
+- AKA compile time polymorphism, early binding.
+
+Use
+---
+- Improves the readability of the program.
+
+GoodToKnow
+----------
+Different Ways of Method Overloading in Java.
+1.Changing the Number of Parameters.
+2.Changing the Data Types of the Arguments.
+3.Changing the Order of the Parameters of Methods
