@@ -1,0 +1,89 @@
+Functional Interface
+--------------------
+- Functional interface is an interface that has exactly one abstract method..
+- Functional interface can have multiple default and static methods but only one abstract method.
+- Functional interface is also known as SAM(Single Abstract Method) interface.
+- @FunctionalInterface annotation is used to ensure that the functional interface can’t have more than one abstract method.
+- If we try to add more than one abstract methods to an interface annotated with @FunctionalInterface, the compiler flags an ‘Unexpected @FunctionalInterface annotation’ message.
+- However, it is not mandatory to use this annotation if an interface contains only one abstract method, it is considered as functional interface by the compiler.
+
+Use
+---
+- Function basic.interfaces avoids need of an implementation class for providing implementation of its single abstract method.
+- Functional basic.interfaces SAM methods implementation can be written as basic.multithreading.lambda expression.
+- Functional interface object is used to hold these basic.multithreading.lambda expression.
+- Functional interface object is used invoke the basic.multithreading.lambda expression. i.e call the method of the functional interface.
+
+
+GoodToKnow
+----------
+- Since Java SE 1.8 onwards, there are many basic.interfaces that are converted into functional basic.interfaces.
+- All these basic.interfaces are annotated with @FunctionalInterface. These basic.interfaces are as follows –
+
+    Runnable –> This interface only contains the run() method.
+    Comparable –> This interface only contains the compareTo() method.
+    ActionListener –> This interface only contains the actionPerformed() method.
+    Callable –> This interface only contains the call() method.
+
+- Java SE 8 included four main kinds of functional basic.interfaces which can be applied in multiple situations as mentioned below.
+
+    Functional Interface            SAM
+    --------------------        -------------
+    Predicate<T>                   boolean test(T t);
+    Function<T, R>              R  apply(T t);
+    Consumer<T>              void  accept(T t);
+    Supplier<T>                 T  get();
+
+
+Lambda Expression
+-----------------
+
+
+- Lambda expression is an anonymous function.
+    1. Not having any access modifier.
+    2. Not having any return type.
+    3. Not having any name.
+
+- Lambda Expression syntax: (arguments) -> {body}
+
+- Steps to make any function as basic.multithreading.lambda expression are:
+    1. Remove access modifier.
+    2. Remove return type.
+    3. Remove method name.
+    4. Place arrow (->)
+
+    public int getStringLength(String str){
+        System.out.print(str.length());
+    }
+
+    Lambda expression of above function:
+
+    (String str) -> {
+        System.out.print(str.length());
+    }
+
+- If body has just one statement we can remove curly brackets. When there is more than one statement, then these must be enclosed in curly brackets.
+
+  (String str) -> return str.length();
+
+- Use type inference, compiler guess the situation or context. i.e. no need to specify the data type of function argument.
+
+  (str) -> return str.length();
+
+- No need of return keyword.
+
+  (str) -> str.length();
+
+- If function takes only one argument; you can remove round bracket.
+
+  str -> str.length();
+
+- Functional Interface object is used to hold the basic.multithreading.lambda expression.
+  FunctionInterface obj = str -> str.length();
+
+
+- Lambda expression provides implementation of functional interface method in clear and concise way. Hence we don't need to use any separate implementation class.
+- We can write basic.multithreading.lambda expression only for functional interface.
+- Without curly braces we cannot use return keyword, compiler will return value automatically.
+- With curly braces it is mandatory to use return statement if you wish to return something.
+

@@ -1,0 +1,39 @@
+- A basic.constructor is a special method that is used to initialize objects.
+- The basic.constructor is called when an object of a class is created.
+- It is called basic.constructor because it constructs the values at the time of object creation.
+- It is not necessary to write a basic.constructor for a class because java compiler creates a default basic.constructor(i.e nor-arg basic.constructor) if your class doesn't have any.
+- Every time an object is created using the new() keyword, at least one basic.constructor is called.
+
+
+How Java Constructors are Different From Java Methods?
+
+- Constructors must have the same name as the class within which it is defined it is not necessary for the method in Java.
+- Constructors do not return any type while method(s) have the return type or void if does not return any value.
+- Constructors are called only once at the time of Object creation while method(s) can be called any number of times.
+- A Java basic.constructor cannot be abstract, static, final, and synchronized.
+- We can use access modifiers while declaring a basic.constructor. It controls the object creation. In other words, we can have private, protected, public or default basic.constructor in Java.
+
+
+
+Types of Constructors
+- Default Constructor AKA No-Arg Constructor (Constructor with no arguments)
+- Parameterised Constructor (Constructor with arguments)
+
+Default Constructor
+- A basic.constructor is called default basic.constructor when it doesn't have any parameter.
+- Default basic.constructor is used to provide the default values to the object like 0, null, etc., depending on the type.
+- If there is no basic.constructor in a class, compiler automatically creates a default basic.constructor.
+
+Parameterised Constructor
+- A basic.constructor is called a parameterized basic.constructor when it has specific number of parameters.
+- The parameterized basic.constructor is used to provide different values to distinct objects. However, you can provide the same values also.
+
+
+
+Constructor Overloading
+
+- Constructor is just like a method but without return type.
+- It can also be overloaded like Java methods.
+- Constructor basic.overloading in Java is a technique of having more than one basic.constructor with different parameter lists.
+- They are arranged in a way that each basic.constructor performs a different task.
+- They are differentiated by the compiler by the number of parameters in the list and their types.
