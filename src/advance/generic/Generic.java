@@ -1,4 +1,4 @@
-package advance.collection;
+package advance.generic;
 
 public class Generic {
     public static void main(String[] args) {

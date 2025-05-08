@@ -8,7 +8,7 @@
 
 */
 
-package advance.collection;
+package advance.generic;
 public class PrintArray<T> {
     public void print(T[] arr)
     {
