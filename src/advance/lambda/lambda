@@ -9,23 +9,23 @@ Functional Interface
 
 Use
 ---
-- Function basic.interfaces avoids need of an implementation class for providing implementation of its single abstract method.
-- Functional basic.interfaces SAM methods implementation can be written as basic.multithreading.lambda expression.
-- Functional interface object is used to hold these basic.multithreading.lambda expression.
-- Functional interface object is used invoke the basic.multithreading.lambda expression. i.e call the method of the functional interface.
+- Function interfaces avoids need of an implementation class for providing implementation of its single abstract method.
+- Functional interfaces SAM methods implementation can be written as lambda expression.
+- Functional interface object is used to hold these lambda expression.
+- Functional interface object is used invoke the lambda expression. i.e call the method of the functional interface.
 
 
 GoodToKnow
 ----------
-- Since Java SE 1.8 onwards, there are many basic.interfaces that are converted into functional basic.interfaces.
-- All these basic.interfaces are annotated with @FunctionalInterface. These basic.interfaces are as follows –
+- Since Java SE 1.8 onwards, there are many interfaces that are converted into functional interfaces.
+- All these interfaces are annotated with @FunctionalInterface. These interfaces are as follows –
 
     Runnable –> This interface only contains the run() method.
     Comparable –> This interface only contains the compareTo() method.
     ActionListener –> This interface only contains the actionPerformed() method.
     Callable –> This interface only contains the call() method.
 
-- Java SE 8 included four main kinds of functional basic.interfaces which can be applied in multiple situations as mentioned below.
+- Java SE 8 included four main kinds of functional interfaces which can be applied in multiple situations as mentioned below.
 
     Functional Interface            SAM
     --------------------        -------------
@@ -46,7 +46,7 @@ Lambda Expression
 
 - Lambda Expression syntax: (arguments) -> {body}
 
-- Steps to make any function as basic.multithreading.lambda expression are:
+- Steps to make any function as lambda expression are:
     1. Remove access modifier.
     2. Remove return type.
     3. Remove method name.
@@ -78,12 +78,12 @@ Lambda Expression
 
   str -> str.length();
 
-- Functional Interface object is used to hold the basic.multithreading.lambda expression.
+- Functional Interface object is used to hold the lambda expression.
   FunctionInterface obj = str -> str.length();
 
 
 - Lambda expression provides implementation of functional interface method in clear and concise way. Hence we don't need to use any separate implementation class.
-- We can write basic.multithreading.lambda expression only for functional interface.
+- We can write lambda expression only for functional interface.
 - Without curly braces we cannot use return keyword, compiler will return value automatically.
 - With curly braces it is mandatory to use return statement if you wish to return something.
 
