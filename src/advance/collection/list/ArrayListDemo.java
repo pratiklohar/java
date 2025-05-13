@@ -7,7 +7,7 @@ import java.util.List;
 public class ArrayListDemo {
     public static void main(String[] args) {
 
-        List<Integer> list = new ArrayList<>(); // generic
+        ArrayList<Integer> list = new ArrayList<>();
 
         list.add(10);
         list.add(20);
@@ -15,17 +15,21 @@ public class ArrayListDemo {
         list.add(40);
         list.add(50);
 
+        System.out.println(list.get(2)); // Access element at index 0.
+
         list.remove(1); // Removes element at index 1.
         System.out.println(list);
 
         list.set(1, 100);   // Replaces element at index 1 with 100.
         System.out.println(list);
 
-        List<Integer> list2 = new ArrayList<>();
-        list2.add(200);
-        list2.add(300);
+        ArrayList<Integer> arrayList2 = new ArrayList<>();
+        arrayList2.add(200);
+        arrayList2.add(300);
 
-        list.addAll(list2); // Adds all elements of list2 to list.
+
+
+        list.addAll(arrayList2); // Adds all elements of list2 to list.
         System.out.println(list);
 
         System.out.println(list.contains(100)); // Checks if list contains 100.

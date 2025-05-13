@@ -15,6 +15,8 @@ public class LinkedHashSetDemo {
         set.add(40);
         set.add(50);
 
+
+
         System.out.println(set);
 
     }

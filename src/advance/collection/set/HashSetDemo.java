@@ -7,7 +7,7 @@ public class HashSetDemo {
 
     public static void main(String[] args) {
 
-        Set<Integer> set = new HashSet<>();
+        HashSet<Integer> set = new HashSet<>();
 
         set.add(10); // Add elements to the set
         set.add(20);

@@ -5,13 +5,29 @@ import advance.lambda.Square;
 public class LambdaExpression {
     public static void main(String[] args) {
 
-        Square square = n-> n*n;        // basic.multithreading.lambda expression - providing implementation of findSquare(int n) method of functional interface Square.
-                                        // Functional Interface object is used to hold the basic.multithreading.lambda expression. i.e. sqaure.
+        // Implementation of SAM (findSquare(int n)) of the functional interface Square through lambda expression
+        // Functional interface object is used to hold the lambda expression
+        Square square = n -> n * n;
 
-        System.out.println(square.findSquare(10));  // Functional interface object is used invoke the basic.multithreading.lambda expression. i.e call the method of the functional interface.
 
-        Runnable runnable = ()-> System.out.println("Hello World!");  // run() method of functional interface Runnable written using basic.multithreading.lambda expression.
+        // Functional interface object is used invoke the lambda expression (to call the SAM)
+        System.out.println(square.findSquare(10));
+
+
+        // Implementation of SAM (run()) of the functional interface Runnable through lambda expression
+        Runnable runnable = () -> System.out.println("Hello from thread 1");
         Thread thread = new Thread(runnable);
-        thread.run();
+        thread.start();
+
+        Thread thread2 = new Thread(() -> {
+            System.out.println("Hello from thread 2");
+        });
+        thread2.start();
+
+
+
+
+
+
     }
 }

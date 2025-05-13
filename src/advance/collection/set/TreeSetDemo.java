@@ -6,15 +6,20 @@ import java.util.TreeSet;
 public class TreeSetDemo {
     public static void main(String[] args) {
 
-        Set<Integer> set = new TreeSet<>(); // TreeSet is a sorted set.
+        TreeSet<Integer> treeSet = new TreeSet<>(); // TreeSet is a sorted set.
 
-        set.add(10); // Add elements to the set
-        set.add(30);
-        set.add(20);
-        set.add(40);
-        set.add(50);
+        treeSet.add(10); // Add elements to the set
+        treeSet.add(30);
+        treeSet.add(20);
+        treeSet.add(40);
+        treeSet.add(50);
 
-        System.out.println(set);
+
+
+
+        System.out.println(treeSet);
+
+        treeSet.getLast(); // Get the last element of the set
 
 
     }

@@ -24,7 +24,7 @@ public class PriorityQueueDemo {
 
         System.out.println(priorityQueue);
 
-        System.out.println(priorityQueue.peek()); // Get element at the front of the priority queue.
+        System.out.println(priorityQueue.peek()); // Get element at the front of the priority queue.;
 
         System.out.println(priorityQueue.isEmpty()); // Check if the priority queue is empty
 

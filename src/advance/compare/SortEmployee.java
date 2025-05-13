@@ -40,6 +40,9 @@ public class SortEmployee {
 
         System.out.println(employees);
 
+        // Sorting the employees in descending order using Comparator
+        employees.sort(new NameComparator().reversed());
+
 
 
     }
