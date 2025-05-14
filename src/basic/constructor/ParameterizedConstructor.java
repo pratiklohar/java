@@ -4,20 +4,17 @@ public class ParameterizedConstructor {
 
     int a;
     String s;
-    ParameterizedConstructor(int a, String s){      // Parameterized Constructor
+    ParameterizedConstructor(int a, String s){ // Parameterized Constructor
         this.a = a;
         this.s = s;
     }
 
     void show(){
-        System.out.println("a :"+a);
-        System.out.println("s :"+s);
+        System.out.println("This is "+s+" "+a);
     }
-
     public static void main(String[] args) {
-        ParameterizedConstructor parameterizedConstructor = new ParameterizedConstructor(5,"Pratik");
+        ParameterizedConstructor parameterizedConstructor = new ParameterizedConstructor(21,"Java");
         parameterizedConstructor.show();
-        ParameterizedConstructor parameterizedConstructor2 = new ParameterizedConstructor(25,"Richa");
-        parameterizedConstructor2.show();
+
     }
 }
