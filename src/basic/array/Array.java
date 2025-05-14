@@ -1,43 +1,33 @@
 package basic.array;
 
+import java.util.Arrays;
+/**
+ <h1>Array</h1>
+ <p>An array is a collection of elements of same data type.
+ <p>Multidimensional arrays are used to store the data in a tabular form
+ <p>The total number of elements that can be stored in a multidimensional array can be calculated by multiplying the size of all the dimensions.
+ <p>The array int[][] arr = new int[10][20] can store a total of (10*20) = 200 elements.
+ <p>Similarly, array int[][][] arr = new int[5][10][20] can store total of (5*10*20) = 1000 elements.
+ * */
 public class Array {
     public static void main(String[] args) {
 
-        int[] arr;              //declaration
-        arr = new int[5];       //instantiation (Allocating memory to basic.array)
-        arr[0]=1001;            //initialization
 
+        int[] integerArray = new int[5]; // Initializing an array of size 5
 
-        int[] array = new int[10];      // declaring and Allocating memory in one line
-        //int []basic.array = new int[10];    // valid
-        //int basic.array[] = new int[10];    // valid
-
-
-        int[] a ={1,2,3};       //declaration, instantiation and initialization
-
-
-        for (int i = 0; i < arr.length; i++) {      //length property is used to access length of an basic.array.
-            arr[i]=i;                               //Inserting element in an basic.array.
+        for (int i = 0; i < integerArray.length; i++) {
+            integerArray[i] = i*10;
         }
 
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]);               // Accessing an element of an basic.array.
-        }
+        System.out.println(Arrays.toString(integerArray)); // Prints the array
 
+        int[] intArray2 = {1, 2, 3}; // Declaration, Instantiation and Initialization
 
-
-        // Multidimensional arrays are used to store the data in a tabular form
-        // The total number of elements that can be stored in a multidimensional basic.array can be calculated by multiplying the size of all the dimensions.
-        // The basic.array int[][] arr = new int[10][20] can store a total of (10*20) = 200 elements.
-        // Similarly, basic.array int[][][] arr = new int[5][10][20] can store total of (5*10*20) = 1000 elements.
-
-
-        // 2-Dimensional Array
 
         int rows = 5;
         int columns = 5;
 
-        int[][] array2D = new int[rows][columns];
+        int[][] array2D = new int[rows][columns]; // 2-Dimensional Array
 
         int value = 1;
         for (int i = 0; i < rows; i++) {
@@ -47,7 +37,7 @@ public class Array {
             }
         }
 
-        System.out.println("The 2D basic.array is: ");
+        System.out.println("The 2D array is: ");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 System.out.print(array2D[i][j] + " ");
