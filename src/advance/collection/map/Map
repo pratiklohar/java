@@ -1,0 +1,9 @@
+Map
+
+- Map is a collection of key-value pairs.
+- Keys are unique.
+- Values can be duplicated.
+- Unordered.
+
+
+

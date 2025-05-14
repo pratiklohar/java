@@ -1,0 +1,4 @@
+List (Ordered Collection)
+
+- Elements can occur more than once in a list, hence contain duplicates.
+- Preserves insertion order of elements, hence elements can be accessed by their index.

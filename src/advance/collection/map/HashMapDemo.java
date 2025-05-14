@@ -10,16 +10,16 @@ public class HashMapDemo {
 
         Map<String, Integer> map = new HashMap<>();
 
-        map.put("One", 1); // Adding elements to the map
-        map.put("Two", 2);
-        map.put("Three", 3);
-        map.put("Four", 4);
-        map.put("Five", 5);
-        map.put("Three", 5); // Duplicate key, will overwrite the value.
+        map.put("Ten", 10); // Adds elements to the map
+        map.put("Twenty", 20);
+        map.put("Thirty", 30);
+        map.put("Forty", 40);
+        map.put("Fifty", 50);
+        map.put("Fifty", 60); // Duplicate key, will overwrite the value
 
         System.out.println(map);
 
-        map.remove("Three");    // removing element from map
+        map.remove("Three"); // Removes element from map
 
         System.out.println(map);
 
@@ -31,7 +31,7 @@ public class HashMapDemo {
 
         System.out.println(map.size()); // Get the size of the map
 
-        map.putIfAbsent("Three", 3); // Add a key-value pair if the key is not already present
+        map.putIfAbsent("Three", 3); // Adds a key-value pair if the key is not already present
 
         System.out.println(map);
 
@@ -56,8 +56,7 @@ public class HashMapDemo {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
 
-        map.clear(); // Clear the map
+        map.clear(); // Clears the map
 
-        System.out.println(map);
     }
 }

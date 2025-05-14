@@ -11,26 +11,18 @@ public class QueueDemo {
 
         Queue<Integer> queue = new LinkedList<>();
 
-        queue.offer(10);    // Add elements to the queue
-        queue.offer(20);
-        queue.offer(30);
-        queue.offer(40);
-        queue.offer(50);
-
+        queue.add(10); // Add element from rear, default behaviour (Enqueue)
+        queue.add(20);
+        queue.add(30);
         System.out.println(queue);
 
-        queue.poll(); // Remove element at the front of the queue
+        System.out.println(queue.element());
 
-        System.out.println(queue.peek()); // Get element at the front of the queue
+        System.out.println(queue.peek()); // Returns front element without removing it
 
-        System.out.println(queue.isEmpty()); // Check if the queue is empty
-
-        System.out.println(queue.contains(20)); // Check if the queue contains an element
-
-        System.out.println(queue.size()); // Get the size of the queue
-
-        queue.clear(); // Clear the queue
-
+        queue.remove(); // Removes element from the front, default behaviour (Dequeue)
         System.out.println(queue);
+
+
     }
 }

@@ -12,7 +12,8 @@ Interface
 For Interface Implementing Class:
 
 - A class can implement an interface using "implements" keyword.
-- Interface is the blueprint of the behaviour for a class implementing it. That means class that implements an interface must implement all the methods declared in the interface.
+- Interface is the blueprint of the behaviour for a class implementing it.
+- This means class that implements an interface must implement all the methods declared in the interface.
 - A class can implement multiple basic.interfaces.
 - Multiple basic.inheritance is not supported in the case of class because of ambiguity.
   However, it is supported in case of an interface because there is no ambiguity.

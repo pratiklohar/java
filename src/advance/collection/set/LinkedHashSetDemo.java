@@ -7,15 +7,13 @@ public class LinkedHashSetDemo {
 
     public static void main(String[] args) {
 
-        Set<Integer> set = new LinkedHashSet<>(); // LinkedHashSet maintains insertion order.
+        Set<Integer> set = new LinkedHashSet<>(); // LinkedHashSet preserves insertion order of elements.
 
         set.add(10); // Add elements to the set
         set.add(30);
         set.add(20);
         set.add(40);
         set.add(50);
-
-
 
         System.out.println(set);
 
