@@ -1,4 +1,0 @@
-Set (Unordered Collection)
-
-- Collection of unique elements, hence no duplicates.
-- Doesn't preserve insertion order of elements, hence elements of set cannot be access by their index.

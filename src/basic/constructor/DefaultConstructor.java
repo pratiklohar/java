@@ -25,19 +25,18 @@ package basic.constructor;
 <br>
 
 <h1>Default Constructor</h1
-<p>A constructor is called default constructor when it doesn't have any parameter.
-<p>Default constructor is used to provide the default values to the object like 0, null, etc., depending on the type.
-<p>If there is no constructor in a class, compiler automatically creates a default constructor.
+<p>Default constructor doesn't have any argument.
+<p>Object is initialized with values provided by default constructor.
+<p>If there are no constructors in a class, compiler automatically creates a default constructor.
 <br>
 
 <h1>Parameterised Constructor</h1>
-<p>A constructor is called a parameterised constructor when it has specific number of parameters.
+<p>Parameterised constructor has arguments.
 <p>The parameterised constructor is used to provide different values to distinct objects. However, you can provide the same values also.
 <br>
 
 <h1>Constructor Overloading</h1>
-<p>Constructor is just like a method but without return type.
-<p>It can also be overloaded like Java methods.
+<p>Constructor is just like a method but without return type. It can also be overloaded like Java methods.
 <p>Constructor overloading in Java is a technique of having more than one constructor with different parameter lists.
 <p>They are arranged in a way that each constructor performs a different task.
 <p>They are differentiated by the compiler by the number of parameters in the list and their types.
