@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
-
+// Ways to create stream in java.
 public class StreamDemo {
     public static void main(String[] args) {
-        //Ways to create stream in java.
+
 
         //using Stream class.
         Stream<Integer> integerStream = Stream.of(1,2,3,4,5);

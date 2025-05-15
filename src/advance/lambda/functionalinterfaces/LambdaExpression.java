@@ -92,13 +92,5 @@ public class LambdaExpression {
         });
         thread2.start();
 
-
-
-
-
-
-
-
-
     }
 }
