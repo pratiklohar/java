@@ -1,8 +1,10 @@
 package advance.collection.map;
 
-public class LinkedHashMap {
+import java.util.LinkedHashMap;
+
+public class LinkedHashMapDemo {
     public static void main(String[] args) {
-        java.util.LinkedHashMap<String, Integer> linkedHashMap = new java.util.LinkedHashMap<>(); // LinkedHashMap preserves insertion order of elements.
+        LinkedHashMap<String,Integer> linkedHashMap = new LinkedHashMap<>(); // LinkedHashMap preserves insertion order of elements.
 
         linkedHashMap.put("One", 1); // Adding elements to the map
         linkedHashMap.put("Two", 2);
