@@ -2,46 +2,46 @@ package basic.multithreading;
 
 public class SleepJoinDemo {
 
-    // Main thread that creates and starts other threads.
     public static void main(String[] args) throws InterruptedException {
 
+        // Creating thread using lambda.
         Thread t1 = new Thread(() -> {
             try {
-                Thread.sleep(5000);
-                System.out.println("Thread 1 finished");
+                Thread.sleep(2000);
+                System.out.println(Thread.currentThread().getName());
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
         });
 
         Thread t2 = new Thread(() -> {
             try {
-                Thread.sleep(3000);
-                System.out.println("Thread 2 finished");
+                Thread.sleep(4000);
+                System.out.println(Thread.currentThread().getName());
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
         });
 
         Thread t3 = new Thread(() -> {
             try {
-                Thread.sleep(1000);
-                System.out.println("Thread 3 finished");
+                Thread.sleep(6000);
+                System.out.println(Thread.currentThread().getName());
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
         });
 
-        // Threads begin execution asynchronously
+        // Threads begin execution asynchronously.
         t1.start();
         t2.start();
         t3.start();
 
-        // The main thread will wait for Thread t1, t2, t3 to finish before proceeding.
+        // Main thread waits for thread t1 and t2 to complete.
         t1.join();
         t2.join();
-        t3.join();
 
-        System.out.println("All threads completed. Main thread ends.");
+        System.out.println(Thread.currentThread().getName());
+
     }
 }
