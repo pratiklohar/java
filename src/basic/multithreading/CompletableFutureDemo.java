@@ -16,7 +16,6 @@ public class CompletableFutureDemo {
 
         }).thenAccept(System.out::println);
 
-        Thread.sleep(1000);
         System.out.println(Thread.currentThread().getName());
 
     }
