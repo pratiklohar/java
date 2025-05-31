@@ -7,6 +7,7 @@ public class ThreadDemo extends Thread {
 
     @Override
     public void run() {
+        // Task
         System.out.println(Thread.currentThread().getName());
     }
 

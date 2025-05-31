@@ -9,7 +9,7 @@ public class AllDemo {
     public static void main(String[] args) {
         Predicate<Integer> predicate = x -> x % 2 == 0;
         Function<Integer,Integer> function = x -> x * x;
-        Consumer<Integer> consumer = x -> System.out.println(x);
+        Consumer<Integer> consumer = System.out::print;
         Supplier<Integer> supplier = () -> 100;
 
         if (predicate.test(supplier.get())){

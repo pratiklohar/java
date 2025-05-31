@@ -7,6 +7,8 @@ public class RunnableDemo implements Runnable {
 
     @Override
     public void run() {
+
+        // Task : To print name of the running thread.
         System.out.println(Thread.currentThread().getName());
     }
 

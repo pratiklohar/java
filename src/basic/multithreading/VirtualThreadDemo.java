@@ -1,19 +1,24 @@
 package basic.multithreading;
 
+import java.util.concurrent.*;
+
 public class VirtualThreadDemo {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-        // Creating thread using lambda.
-        Thread.startVirtualThread(() -> {
+        // 1st way : via executor service.
+        ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor();
+
+        executorService.submit(() -> {
             try {
-                Thread.sleep(1000);
                 System.out.println(Thread.currentThread().getName());
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         });
 
+        // 2nd way : via thread class.
         Thread.startVirtualThread(() -> {
             try {
                 Thread.sleep(2000);
