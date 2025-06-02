@@ -1,38 +1,39 @@
 package basic.multithreading;
 
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
 public class ExecutorServiceDemo {
 
-    public static void main(String[] args){
 
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+    public static void main(String[] args) {
 
-        executorService.submit(() -> {
+        var executorService = Executors.newFixedThreadPool(2);
+
+        executorService.submit(()-> {
             try {
-                Thread.sleep(2000);
+                Thread.sleep(1000);
+                System.out.println(Thread.currentThread().getName());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println(Thread.currentThread().getName());
         });
 
-        executorService.submit(() -> {
+        executorService.submit(()-> {
             try {
-                Thread.sleep(3000);
+                Thread.sleep(1000);
+                System.out.println(Thread.currentThread().getName());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println(Thread.currentThread().getName());
         });
 
-        executorService.submit(() -> {
+        executorService.submit(()-> {
             try {
-                Thread.sleep(2000);
+                Thread.sleep(1000);
+                System.out.println(Thread.currentThread().getName());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println(Thread.currentThread().getName());
         });
 
         executorService.shutdown();

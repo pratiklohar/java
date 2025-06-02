@@ -21,7 +21,7 @@ public class ThreadViaLambda {
         new Thread(() -> System.out.println(Thread.currentThread().getName())).start();
 
         // 4th way
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        var executorService = Executors.newSingleThreadExecutor();
         executorService.submit(() -> System.out.println(Thread.currentThread().getName()));
         executorService.shutdown();
 

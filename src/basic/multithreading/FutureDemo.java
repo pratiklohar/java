@@ -1,7 +1,6 @@
 package basic.multithreading;
 
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
@@ -9,7 +8,7 @@ public class FutureDemo {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
-        ExecutorService executorService = Executors.newCachedThreadPool();
+        var executorService = Executors.newCachedThreadPool();
 
         Future<Object> future = executorService.submit(() -> {
             Thread.sleep(1000);
