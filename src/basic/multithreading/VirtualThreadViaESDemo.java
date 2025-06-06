@@ -2,16 +2,15 @@ package basic.multithreading;
 
 import java.util.concurrent.Executors;
 
-public class ExecutorServiceDemo {
+public class VirtualThreadViaESDemo {
+    public static void main(String[] args) throws InterruptedException {
 
-    public static void main(String[] args) {
-
-        var executorService = Executors.newFixedThreadPool(2);
+        var executorService = Executors.newVirtualThreadPerTaskExecutor();
 
         executorService.submit(()-> {
             try {
                 Thread.sleep(1000);
-                System.out.println(Thread.currentThread().getName());
+                System.out.println(Thread.currentThread().threadId());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -20,7 +19,7 @@ public class ExecutorServiceDemo {
         executorService.submit(()-> {
             try {
                 Thread.sleep(1000);
-                System.out.println(Thread.currentThread().getName());
+                System.out.println(Thread.currentThread().threadId());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -29,14 +28,14 @@ public class ExecutorServiceDemo {
         executorService.submit(()-> {
             try {
                 Thread.sleep(1000);
-                System.out.println(Thread.currentThread().getName());
+                System.out.println(Thread.currentThread().threadId());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         });
 
-        executorService.shutdown();
+
         System.out.println(Thread.currentThread().getName());
+
     }
 }
-

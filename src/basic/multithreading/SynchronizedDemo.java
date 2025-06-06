@@ -22,9 +22,6 @@ public class SynchronizedDemo {
         Thread t1 = new Thread(synchronizedDemo::increment);
         Thread t2 = new Thread(synchronizedDemo::increment);
 
-        // Starts thread asynchronously.
-        t1.start();
-        t2.start();
 
         // Main thread waits for t1 and t2 to finish.
         t1.join();

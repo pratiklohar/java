@@ -1,42 +1,35 @@
 package basic.multithreading;
 
-import java.util.concurrent.Executors;
-
-public class ExecutorServiceDemo {
-
+public class WithoutVirtualThread {
     public static void main(String[] args) {
 
-        var executorService = Executors.newFixedThreadPool(2);
-
-        executorService.submit(()-> {
+        new Thread(() -> {
             try {
                 Thread.sleep(1000);
                 System.out.println(Thread.currentThread().getName());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-        });
+        }).start();
 
-        executorService.submit(()-> {
+        new Thread(() -> {
             try {
                 Thread.sleep(1000);
                 System.out.println(Thread.currentThread().getName());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-        });
+        }).start();
 
-        executorService.submit(()-> {
+        new Thread(() -> {
             try {
                 Thread.sleep(1000);
                 System.out.println(Thread.currentThread().getName());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-        });
+        }).start();
 
-        executorService.shutdown();
         System.out.println(Thread.currentThread().getName());
     }
 }
-

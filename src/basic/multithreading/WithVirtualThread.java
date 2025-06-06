@@ -1,14 +1,8 @@
 package basic.multithreading;
 
-import java.util.concurrent.Executors;
-
-public class ExecutorServiceDemo {
-
+public class WithVirtualThread {
     public static void main(String[] args) {
-
-        var executorService = Executors.newFixedThreadPool(2);
-
-        executorService.submit(()-> {
+        Thread.startVirtualThread(() -> {
             try {
                 Thread.sleep(1000);
                 System.out.println(Thread.currentThread().getName());
@@ -17,7 +11,7 @@ public class ExecutorServiceDemo {
             }
         });
 
-        executorService.submit(()-> {
+        Thread.startVirtualThread(() -> {
             try {
                 Thread.sleep(1000);
                 System.out.println(Thread.currentThread().getName());
@@ -26,7 +20,7 @@ public class ExecutorServiceDemo {
             }
         });
 
-        executorService.submit(()-> {
+        Thread.startVirtualThread(() -> {
             try {
                 Thread.sleep(1000);
                 System.out.println(Thread.currentThread().getName());
@@ -35,8 +29,6 @@ public class ExecutorServiceDemo {
             }
         });
 
-        executorService.shutdown();
         System.out.println(Thread.currentThread().getName());
     }
 }
-
