@@ -8,23 +8,16 @@ public class RunnableDemo implements Runnable {
     @Override
     public void run() {
 
-        // Task : To print name of the running thread.
-        System.out.println(Thread.currentThread().getName());
+        System.out.println(Thread.currentThread().getName()); // task : print name of the running thread.
     }
-
     public static void main(String[] args) {
 
-        // Prints the name of the current thread.
         System.out.println(Thread.currentThread().getName());
 
-        // Create an object of a class that implements the Runnable interface.
-        Runnable task = new RunnableDemo();
+        Runnable task = new RunnableDemo(); // create an object of a class that implements the Runnable interface.
 
-        // Create an object of Thread class and pass runnable object to Its constructor.
-        Thread thread = new Thread(task);
+        Thread thread = new Thread(task); // create an object of Thread class and pass runnable object to Its constructor.
 
-        // Starts the new thread.
-        thread.start();
-
+        thread.start(); // starts the new thread.
     }
 }

@@ -7,19 +7,15 @@ public class ThreadDemo extends Thread {
 
     @Override
     public void run() {
-        // Task
+        // task : print name of the running thread.
         System.out.println(Thread.currentThread().getName());
     }
-
     public static void main(String[] args) {
 
-        // Prints the name of the current thread.
         System.out.println(Thread.currentThread().getName());
 
-        // Create an object of a class that extends the Thread class.
-        ThreadDemo thread = new ThreadDemo();
+        ThreadDemo thread = new ThreadDemo(); // create an object of a class that extends the Thread class
 
-        // Starts the new thread.
-        thread.start();
+        thread.start(); // starts the new thread
     }
 }

@@ -6,7 +6,6 @@ public class SleepJoinDemo {
 
     public static void main(String[] args) throws InterruptedException {
 
-        // Creating thread using lambda.
         Thread t1 = new Thread(() -> {
             try {
                 Thread.sleep(1000);
@@ -25,14 +24,14 @@ public class SleepJoinDemo {
             }
         });
 
-        // Starts thread asynchronously.
+        // starts threads t1 and t2 parallelly.
         t1.start();
         t2.start();
 
-        // Main thread waits for t1 to finish.
+        // main thread waits for t1 and t2 to finish.
         t1.join();
+        t2.join();
 
         System.out.println(Thread.currentThread().getName());
-
     }
 }

@@ -1,12 +1,13 @@
 package basic.multithreading;
 
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ExecutorServiceDemo {
 
     public static void main(String[] args) {
 
-        var executorService = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
 
         executorService.submit(()-> {
             try {
