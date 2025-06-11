@@ -14,6 +14,7 @@ public class JDK21SwitchDemo {
         };
     }
 
+    // match types directly in case labels.
     static Object patternMatching(Object obj) {
         return switch (obj) {
             case String s -> "It's a string of length: " + s.length();
@@ -34,6 +35,7 @@ public class JDK21SwitchDemo {
 
         Object input = new Person("Alice", 25);
 
+        // combine with guard conditions (when) for finer control.
         String output = switch (input) {
             case Person p when p.age() >= 18 -> "Adult: " + p.name();
             case Person p -> "Minor: " + p.name();
