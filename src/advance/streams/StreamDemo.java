@@ -2,6 +2,8 @@ package advance.streams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -37,6 +39,12 @@ public class StreamDemo {
                 .limit(4)
                 .toList();
         System.out.println(filteredList);
+
+        Map<String, List<Integer>> oddevenmap = integerList.stream().collect(Collectors.groupingBy(n -> n % 2 == 0 ? "Even" : "Odd"));
+
+        System.out.println(oddevenmap);
+
+
 
     }
 }
