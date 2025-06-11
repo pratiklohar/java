@@ -1,11 +1,10 @@
 package advance.collection.queue;
 
 import java.util.ArrayDeque;
-import java.util.Deque;
 
 /**
- ArrayDeque (short for Array Double Ended Queue) is a resizable array implementation of the Deque interface in Java.
- It allows you to add or remove elements from both ends (head and tail) of the queue efficiently.
+ * ArrayDeque (short for Array Double Ended Queue) is a resizable array implementation of the Deque interface in Java.
+ * It allows you to add or remove elements from both ends (head and tail) of the queue efficiently.
  */
 
 public class ArrayDequeDemo {

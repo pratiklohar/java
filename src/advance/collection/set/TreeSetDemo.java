@@ -1,6 +1,5 @@
 package advance.collection.set;
 
-import java.util.Set;
 import java.util.TreeSet;
 
 public class TreeSetDemo {
@@ -13,9 +12,6 @@ public class TreeSetDemo {
         treeSet.add(20);
         treeSet.add(40);
         treeSet.add(50);
-
-
-
 
         System.out.println(treeSet);
 
