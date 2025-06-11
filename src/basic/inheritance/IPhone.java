@@ -2,37 +2,48 @@ package basic.inheritance;
 
 public class IPhone extends Apple{
 
-    private String ram;
-    private String resolution;
+    private String frontCamera;
+    private String rearCamera;
 
-    public String getRam() {
-        return ram;
+    public String getFrontCamera() {
+        return frontCamera;
     }
 
-    public void setRam(String ram) {
-        this.ram = ram;
+    public void setFrontCamera(String frontCamera) {
+        this.frontCamera = frontCamera;
     }
 
-    public String getResolution() {
-        return resolution;
+    public String getRearCamera() {
+        return rearCamera;
     }
 
-    public void setResolution(String resolution) {
-        this.resolution = resolution;
+    public void setRearCamera(String rearCamera) {
+        this.rearCamera = rearCamera;
     }
+
 
     public static void main(String[] args) {
 
         IPhone iPhone = new IPhone();
-        iPhone.setProductId("IP15X128GB");
+
+        iPhone.setBrand("Apple");
+        iPhone.setModel("iPhone 16");
         iPhone.setRam("8GB");
-        iPhone.setResolution("48MP");
-        iPhone.setPrice(50000);
+        iPhone.setStorage("256GB");
+        iPhone.setProcessor("A17 Bionic");
+        iPhone.setBattery("3500mAh");
+        iPhone.setFrontCamera("12MP");
+        iPhone.setRearCamera("48MP");
+        iPhone.setPrice(999);
 
-        System.out.println(iPhone.getProductId());
-        System.out.println(iPhone.getRam());
-        System.out.println(iPhone.getResolution());
-        System.out.println(iPhone.getPrice());
-
+        System.out.println("Brand: " + iPhone.getBrand());
+        System.out.println("Model: " + iPhone.getModel());
+        System.out.println("RAM: " + iPhone.getRam());
+        System.out.println("Storage: " + iPhone.getStorage());
+        System.out.println("Processor: " + iPhone.getProcessor());
+        System.out.println("Battery: " + iPhone.getBattery());
+        System.out.println("Front Camera: " + iPhone.getFrontCamera());
+        System.out.println("Rear Camera: " + iPhone.getRearCamera());
+        System.out.println("Price($): " + iPhone.getPrice());
     }
 }

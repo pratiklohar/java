@@ -5,24 +5,19 @@ public class Rectangle extends Shape {
     private int length;
     private int width;
 
-    public void setLength(int length) {
+    public Rectangle(int length, int width) {
         this.length = length;
-    }
-
-    public void setWidth(int width) {
         this.width = width;
     }
 
     @Override
     float area() {
-
-        return length*width;
+        return length * width;
     }
 
     public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle();
-        rectangle.setLength(10);
-        rectangle.setWidth(10);
-        System.out.println(rectangle.area());
+        Shape shape = new Rectangle(10, 20);
+        shape.draw();
+        System.out.println(shape.area());
     }
 }

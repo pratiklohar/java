@@ -1,7 +1,7 @@
 package basic.overrriding;
 
 public class Animal {
-    void sound(){
+    void sound() {
         System.out.println("Please override me.");
     }
 }

@@ -2,18 +2,20 @@ package basic.constructor;
 
 public class ParameterizedConstructor {
 
-    int a;
-    String s;
-    ParameterizedConstructor(int a, String s){ // Parameterized Constructor
-        this.a = a;
-        this.s = s;
+    private int version;
+    private String language;
+
+    public ParameterizedConstructor(int version, String language) {
+        this.version = version;
+        this.language = language;
     }
 
-    void show(){
-        System.out.println("This is "+s+" "+a);
+    void show() {
+        System.out.println("This is " + language + " " + version);
     }
+
     public static void main(String[] args) {
-        ParameterizedConstructor parameterizedConstructor = new ParameterizedConstructor(21,"Java");
+        ParameterizedConstructor parameterizedConstructor = new ParameterizedConstructor(21, "Java");
         parameterizedConstructor.show();
 
     }
