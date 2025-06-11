@@ -4,21 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * This class demonstrates the use of the synchronized keyword.
- * The {@code synchronized } keyword in Java is used to prevent concurrent access to critical sections of code by multiple threads. It ensures that only one thread can execute a block of code or method at a time, providing thread safety.
- */
-public class SynchronizedDemo {
+public class AtomicDemo {
 
-    private int counter = 0;
-
-    public synchronized void increment() {
-        counter++;
-    }
     public static void main(String[] args) throws InterruptedException {
 
-        SynchronizedDemo synchronizedDemo = new SynchronizedDemo();
+        AtomicInteger counter = new AtomicInteger(0);
 
         var executorService = Executors.newFixedThreadPool(10);
 
@@ -27,7 +19,7 @@ public class SynchronizedDemo {
         for (int i = 0; i < 10; i++) {
             tasks.add(() -> {
                 for (int j = 0; j < 1000; j++) {
-                    synchronizedDemo.increment();
+                    counter.getAndIncrement();
                 }
                 return null;
             });
@@ -38,6 +30,7 @@ public class SynchronizedDemo {
 
         executorService.shutdown();
 
-        System.out.println(synchronizedDemo.counter);
+        System.out.println(counter);
     }
 }
+
